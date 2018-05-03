@@ -4,8 +4,8 @@
     $link = mysqli_connect($host, $user, $password, $database) 
     or die ("Ошибка подключения к базе данных" . mysqli_error());
 
-    $name = $_GET['grape_sort'];
-    $fio = $_GET['company_name'];
+    $grape_sort = strtr(trim($_GET['grape_sort'],'*','%'));
+    $company_name = strtr(trim($_GET['company_name'],'*','%'));
 
     echo "<form method='GET' action='search.php'>
     <p>Введите часть от названия сорта винограда(на английском): <input type='text' name='grape_sort' value='$grape_sort'></p>
