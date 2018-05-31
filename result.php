@@ -4,9 +4,8 @@ require_once 'connection.php';
 $link = mysqli_connect($host, $user, $password, $database) 
     or die ("Обнаружена ошибка в подключении к базе данных. Будь умницей, исправь, пока не поздно" . mysqli_error());
     
-
     $id_order = (int)$_GET['id_order'];
-	$id_product = $_GET['id_product'];
+    $id_product = $_GET['id_product'];
     $id_client = $_GET['id_client'];
     $order_quantity = $_GET['order_quantity'];
     $departure_date = $_GET['departure_date'];
